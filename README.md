@@ -16,16 +16,14 @@ Let latent dimension = 2. Check exp_num/config.yaml for more detial.
 | mlp->R2  | 0.95 |  0.88   |  0.9  |
 - Latent Space Plots
     - exp0
-    ![aspect ratio](./exp0/ar_L-S_evolution.gif)
 
-    ![incident angle](./exp0/angle_LS_evolution.gif)
-    
+    |![aspect ratio](./exp0/ar_LS_evolution.gif)| ![incident angle](./exp0/angle_LS_evolution.gif)|
+    |--- | ---|
     - exp1
-    ![aspect ratio](./exp1/ar_L-S_evolution.gif)
-    
-    ![incident angle](./exp1/angle_LS_evolution.gif)
-    
+
+    | ![aspect ratio](./exp1/ar_LS_evolution.gif)|![incident angle](./exp1/angle_LS_evolution.gif) |
+    |--- |--- |
     - exp2
-    ![aspect ratio](./exp2/ar_L-S_evolution.gif)
-    
-    ![incident angle](./exp2/angle_LS_evolution.gif)
+
+    | ![aspect ratio](./exp2/ar_LS_evolution.gif) |   ![incident angle](./exp2/angle_LS_evolution.gif)|
+    |--- | ---|
