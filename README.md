@@ -28,14 +28,17 @@ Let latent dimension = 2. Check exp_num/config.yaml for more detial.
 
     |![vae](./exp2/vae.png)| ![vae_bce_kld](./exp2/vae_bce_kld.png)| ![mlp](./exp2/mlp.png)|
     |--- | ---| --- |
+    
     <!-- - exp3 -->
     <!---->
     <!-- |![vae](./exp3/vae.png)| ![vae_bce_kld](./exp3/vae_bce_kld.png)| ![mlp](./exp3/mlp.png)| -->
     <!-- |--- | ---| --- | -->
+    
     - exp4
 
     |![vae](./exp4/vae.png)| ![vae_bce_kld](./exp4/vae_bce_kld.png)| ![mlp](./exp4/mlp.png)|
     |--- | ---| --- |
+
     <!-- - exp5 -->
     <!---->
     <!-- |![vae](./exp0/vae.png)| ![vae_bce_kld](./exp0/vae_bce_kld.png)| ![mlp](./exp0/mlp.png)| -->
