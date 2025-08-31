@@ -1,0 +1,66 @@
+# ~/VAE-ANN/combined/experiments/config.yaml
+# Configuration for VAE Training
+
+# -----------------
+# Data Paths
+# -----------------
+data:
+  # DATA_PATHS
+  metadata_path: 'data/dataset/metadata.csv'
+  voxels_dir: 'data/dataset/voxel'
+  sdf_dir: 'data/dataset/sdf'
+  stl_dir: 'data/dataset/stl'
+  # OUTPTU_PATHS
+  model_save_dir: 'checkpoints'
+  latent_save_dir: "latent_codes"
+# -----------------
+# VAE Model Architecture
+# -----------------
+model_vae:
+  # Input shape for the VAE (Channels, D, H, W)
+  input_D: 64
+  input_channels: 1
+  input_D: 64
+  # Size of the latent space bottleneck
+  latent_dim: 2
+  # Filters for each convolutional block in the encoder
+  hidden_dims: [32, 64, 128, 256, 512]
+  # Size of the intermediate fully-connected layer
+  fc_dim: 2048
+
+# -----------------
+# Training Hyperparameters - VAE
+# -----------------
+train_vae:
+  learning_rate: 0.0001
+  batch_size: 32
+  num_epochs: 150
+  # Percentage of data to use for validation
+  validation_split: 0.2
+
+cyclical_beta:
+  cycle_length: 25
+  num_cycles: 5
+  beta_min: 0.0
+  beta_max: 0.5
+  mode: 'cosine'  # 'linear' or 'cosine'
+
+# -----------------
+# MLP Model Architecture
+# -----------------
+model_mlp:
+  latent_dim: 2
+  hidden_dims: [32, 16, 8]
+  output_dim: 1
+
+# -----------------
+# Training Hyperparameters - MLP
+# -----------------
+train_mlp:
+  learning_rate: 0.001
+  batch_size: 64
+  num_epochs: 200
+  optimizer: "Adam"
+  loss_function: "MSELoss"
+  dropout_p: 0.3
+  validation_split: 0.2
