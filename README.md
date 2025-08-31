@@ -1,12 +1,20 @@
 # Experiments
-This repository is used to save **the history log of experiments**.
+This repository is used to save **the experiment backup**.
 ## File structure 
-Each `exp [number]` means one single experiment. It includes the following files:
-- config.yaml --> Config of my experiment, it includes almost setting of experiments.
-
+Each of `exp [number]` means one single experiment. You can find the config easily at,
+- config.yaml |-> It includes:  1. neural network sturcture, 
+                                2. train setting, 
+                                3. cycilical annealing setting
+    
 ## Description
 ### Latent_Disentangle
 Let latent dimension = 2. Check exp_num/config.yaml for more detial.
+*Goals:* To investigate the capability of this framework, we make a serise of 
+Experiments
+
+---
+Exp. 0 ~ 2, we study and compare the influnce of beta value (weight KLD) on geometries 
+reconstruction quality, latent space shape, final prediction R2 score.
 - Metrics of vae and mlp
 
 |      | 0   | 1   | 2   |
@@ -28,24 +36,6 @@ Let latent dimension = 2. Check exp_num/config.yaml for more detial.
 
     |![vae](./exp2/vae.png)| ![vae_bce_kld](./exp2/vae_bce_kld.png)| ![mlp](./exp2/mlp.png)|
     |--- | ---| --- |
-    
-    - exp3
-
-    |![vae](./exp3/vae.png)| ![vae_bce_kld](./exp3/vae_bce_kld.png)| ![mlp](./exp3/mlp.png)|
-    |--- | ---| --- |
-    
-    - exp4
-
-    |![vae](./exp4/vae.png)| ![vae_bce_kld](./exp4/vae_bce_kld.png)| ![mlp](./exp4/mlp.png)|
-    |--- | ---| --- |
-
-    - exp5
-
-    |![vae](./exp5/vae.png)| ![vae_bce_kld](./exp5/vae_bce_kld.png)| ![mlp](./exp5/mlp.png)|
-    |--- | ---| --- |
-
-
-
 
 - Latent Space Plots
     - exp0
@@ -59,20 +49,6 @@ Let latent dimension = 2. Check exp_num/config.yaml for more detial.
     - exp2
 
     | ![aspect ratio](./exp2/ar_LS_evolution.gif) |   ![incident angle](./exp2/angle_LS_evolution.gif)|
-    |--- | ---|
-    - exp3
-
-    | ![aspect ratio](./exp3/ar_LS_evolution.gif) |   ![incident angle](./exp3/angle_LS_evolution.gif)|
-    |--- | ---|
-
-    - exp4
-
-    | ![aspect ratio](./exp4/ar_LS_evolution.gif) |   ![incident angle](./exp4/angle_LS_evolution.gif)|
-    |--- | ---|
-
-    - exp4
-
-    | ![aspect ratio](./exp5/ar_LS_evolution.gif) |   ![incident angle](./exp5/angle_LS_evolution.gif)|
     |--- | ---|
 ### Reconstruction 
 - exp0
@@ -91,6 +67,35 @@ Let latent dimension = 2. Check exp_num/config.yaml for more detial.
 | origin |![particle01](./exp2/inspect/original_pparticle_0000_00_idx0.png)|![particle02](./exp2/inspect/original_pparticle_0000_01_idx1.png) | ![particle03](./exp2/inspect/original_pparticle_0000_02_idx2.png) |
 |--- |--- |--- |--- |
 | reconstruction |![particle01](./exp2/inspect/reconstructed_pparticle_0000_00_idx0.png)|![particle02](./exp2/inspect/reconstructed_pparticle_0000_01_idx1.png)  |![particle03](./exp2/inspect/reconstructed_pparticle_0000_02_idx2.png) |
+## VAE Capacity Study
+### Loss Curve
+- exp3
+
+|![vae](./exp3/vae.png)| ![vae_bce_kld](./exp3/vae_bce_kld.png)| ![mlp](./exp3/mlp.png)|
+|--- | ---| --- |
+- exp4
+
+|![vae](./exp4/vae.png)| ![vae_bce_kld](./exp4/vae_bce_kld.png)| ![mlp](./exp4/mlp.png)|
+|--- | ---| --- |
+- exp5
+
+|![vae](./exp5/vae.png)| ![vae_bce_kld](./exp5/vae_bce_kld.png)| ![mlp](./exp5/mlp.png)|
+|--- | ---| --- |
+
+### Latent Space Shape
+- exp3
+
+| ![aspect ratio](./exp3/ar_LS_evolution.gif) |   ![incident angle](./exp3/angle_LS_evolution.gif)|
+|--- | ---|
+- exp4
+
+| ![aspect ratio](./exp4/ar_LS_evolution.gif) |   ![incident angle](./exp4/angle_LS_evolution.gif)|
+|--- | ---|
+- exp5
+
+| ![aspect ratio](./exp5/ar_LS_evolution.gif) |   ![incident angle](./exp5/angle_LS_evolution.gif)|
+|--- | ---|
+### Reconstruction
 - exp3
 
 | origin |![particle01](./exp3/inspect/original_pparticle_0000_00_idx0.png)|![particle02](./exp3/inspect/original_pparticle_0000_01_idx1.png) | ![particle03](./exp3/inspect/original_pparticle_0000_02_idx2.png) |
@@ -106,3 +111,4 @@ Let latent dimension = 2. Check exp_num/config.yaml for more detial.
 | origin |![particle01](./exp5/inspect/original_pparticle_0000_00_idx0.png)|![particle02](./exp5/inspect/original_pparticle_0000_01_idx1.png) | ![particle03](./exp5/inspect/original_pparticle_0000_02_idx2.png) |
 |--- |--- |--- |--- |
 | reconstruction |![particle01](./exp5/inspect/reconstructed_pparticle_0000_00_idx0.png)|![particle02](./exp5/inspect/reconstructed_pparticle_0000_01_idx1.png)  |![particle03](./exp5/inspect/reconstructed_pparticle_0000_02_idx2.png) |
+
