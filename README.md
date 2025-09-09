@@ -45,7 +45,7 @@ Tip: **bce (Binary Cross-Entropy)**, is a loss function used in binary classific
 |No.|Loss vae | bce&kld Loss vae| Loss mlp |
 | --- |--- | ---| --- |
 |exp0|![vae](./exp0/vae.png)| ![vae_bce_kld](./exp0/vae_bce_kld.png)| ![mlp](./exp0/mlp.png)|
-|exp1|![vae](./exp2/vae.png)| ![vae_bce_kld](./exp2/vae_bce_kld.png)| ![mlp](./exp2/mlp.png)|
+|exp1|![vae](./exp1/vae.png)| ![vae_bce_kld](./exp1/vae_bce_kld.png)| ![mlp](./exp1/mlp.png)|
 |exp2|![vae](./exp2/vae.png)| ![vae_bce_kld](./exp2/vae_bce_kld.png)| ![mlp](./exp2/mlp.png)|
 
 
