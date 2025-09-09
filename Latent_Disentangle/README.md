@@ -2,10 +2,8 @@
 This repository is used to save **the experiment backup**.
 ## Result File track
 Each of `exp [number]` means one single experiment. You can find the config easily at,
-- config.yaml |-> It includes:  
-    1. neural network sturcture
-    2. train setting
-    3. cycilical annealing setting
+- config.yaml  
+
 - related result, such as loss curve, saved model checkpoints
 
 ## Experimental Grid
